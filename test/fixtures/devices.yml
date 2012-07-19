@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  customer_id: 1
+  incom_address: MyString
+  device_type: MyString
+  ds_name: MyString
+  frame_size: MyString
+  descName: MyString
+  desc_location: MyString
+  desc_bucket: MyString
+  trending: false
+  plug_ctrating: MyString
+  voltage_class: MyString
+  status: 1
+  upstream_device: MyString
+  mac_address: MyString
+  firmware: MyString
+  amps: MyString
+  power_factor: MyString
+  lan_type: MyString
+  host_name: MyString
+  ip_address_setting: MyString
+  subnet_mask: MyString
+  default_gateway: MyString
+  preferred_dns_server: MyString
+  alternate_dns_server: MyString
+  domain_name: MyString
+  modbus_tcp_ip_enabled: MyString
+
+two:
+  name: MyString
+  customer_id: 1
+  incom_address: MyString
+  device_type: MyString
+  ds_name: MyString
+  frame_size: MyString
+  descName: MyString
+  desc_location: MyString
+  desc_bucket: MyString
+  trending: false
+  plug_ctrating: MyString
+  voltage_class: MyString
+  status: 1
+  upstream_device: MyString
+  mac_address: MyString
+  firmware: MyString
+  amps: MyString
+  power_factor: MyString
+  lan_type: MyString
+  host_name: MyString
+  ip_address_setting: MyString
+  subnet_mask: MyString
+  default_gateway: MyString
+  preferred_dns_server: MyString
+  alternate_dns_server: MyString
+  domain_name: MyString
+  modbus_tcp_ip_enabled: MyString

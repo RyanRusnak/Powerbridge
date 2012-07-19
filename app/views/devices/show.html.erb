@@ -1,0 +1,73 @@
+<%- model_class = @device.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @device.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:customer_id) %>:</strong></dt>
+  <dd><%= @device.customer_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:incom_address) %>:</strong></dt>
+  <dd><%= @device.incom_address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:device_type) %>:</strong></dt>
+  <dd><%= @device.device_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ds_name) %>:</strong></dt>
+  <dd><%= @device.ds_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:frame_size) %>:</strong></dt>
+  <dd><%= @device.frame_size %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:descName) %>:</strong></dt>
+  <dd><%= @device.descName %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:desc_location) %>:</strong></dt>
+  <dd><%= @device.desc_location %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:desc_bucket) %>:</strong></dt>
+  <dd><%= @device.desc_bucket %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:trending) %>:</strong></dt>
+  <dd><%= @device.trending %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:plug_ctrating) %>:</strong></dt>
+  <dd><%= @device.plug_ctrating %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:voltage_class) %>:</strong></dt>
+  <dd><%= @device.voltage_class %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
+  <dd><%= @device.status %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:upstream_device) %>:</strong></dt>
+  <dd><%= @device.upstream_device %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mac_address) %>:</strong></dt>
+  <dd><%= @device.mac_address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:firmware) %>:</strong></dt>
+  <dd><%= @device.firmware %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:amps) %>:</strong></dt>
+  <dd><%= @device.amps %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:power_factor) %>:</strong></dt>
+  <dd><%= @device.power_factor %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:lan_type) %>:</strong></dt>
+  <dd><%= @device.lan_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:host_name) %>:</strong></dt>
+  <dd><%= @device.host_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ip_address_setting) %>:</strong></dt>
+  <dd><%= @device.ip_address_setting %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:subnet_mask) %>:</strong></dt>
+  <dd><%= @device.subnet_mask %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:default_gateway) %>:</strong></dt>
+  <dd><%= @device.default_gateway %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:preferred_dns_server) %>:</strong></dt>
+  <dd><%= @device.preferred_dns_server %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:alternate_dns_server) %>:</strong></dt>
+  <dd><%= @device.alternate_dns_server %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:domain_name) %>:</strong></dt>
+  <dd><%= @device.domain_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:modbus_tcp_enabled) %>:</strong></dt>
+  <dd><%= @device.modbus_tcp_enabled %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              customer_path(@device.customer_id), :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_customer_device_path(@device.customer_id, @device), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              customer_device_path(@device),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>

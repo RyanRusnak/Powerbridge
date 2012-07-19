@@ -1,0 +1,170 @@
+<%= form_for [@customer, @device] do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :customer_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :customer_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :incom_address, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :incom_address, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :device_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :device_type, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :ds_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ds_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :frame_size, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :frame_size, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :descName, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :descName, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :desc_location, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :desc_location, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :desc_bucket, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :desc_bucket, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :trending, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :trending, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :plug_ctrating, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :plug_ctrating, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :voltage_class, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :voltage_class, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :status, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :upstream_device, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :upstream_device, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :mac_address, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :mac_address, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :firmware, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :firmware, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :amps, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :amps, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :power_factor, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :power_factor, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lan_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lan_type, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :host_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :host_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :ip_address_setting, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ip_address_setting, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :subnet_mask, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :subnet_mask, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :default_gateway, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :default_gateway, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :preferred_dns_server, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :preferred_dns_server, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :alternate_dns_server, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :alternate_dns_server, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :domain_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :domain_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :modbus_tcp_enabled, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :modbus_tcp_enabled, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                customer_path(@customer), :class => 'btn' %>
+  </div>
+<% end %>
