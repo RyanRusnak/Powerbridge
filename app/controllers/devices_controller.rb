@@ -85,7 +85,7 @@ class DevicesController < ApplicationController
     @device.destroy
 
     respond_to do |format|
-      format.html { redirect_to devices_url }
+      format.html { redirect_to([@customer,@device] }
       format.json { head :no_content }
     end
   end
