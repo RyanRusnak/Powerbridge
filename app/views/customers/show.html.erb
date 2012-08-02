@@ -22,12 +22,14 @@
               :method => 'delete',
               :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
               :class => 'btn btn-danger' %>
+<p id="pdf_link"><%= link_to "Client Report", customer_path(@customer, :format => "pdf"), :class => 'btn' %></p>
 </div>
 
 <h1>Devices</h1>
 <table class="table table-striped">
   <thead>
     <tr>
+		<th></th>
       	<th>Device Name</th>
 		<th>Device Type</th>
 		<th>Address</th>
@@ -45,6 +47,15 @@
   <tbody>
     <% @customer.devices.each do |device| %>
       <tr>
+		<td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_customer_device_path(device.customer_id, device), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      customer_device_path(device.customer_id, device),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+		</td>
          <td><%= link_to device.desc_location, customer_device_path(device.customer_id, device) %></td>
 		<td><%= device.device_type %></td>
 		<td><%= device.incom_address %></td>
@@ -57,20 +68,11 @@
 		<td><%= device.modbus_tcp_enabled %></td>
 		<td><%= device.amps %></td>
 		<td><%= device.realStatus %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_customer_device_path(device.customer_id, device), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      customer_device_path([ device]),
-                      :method => :delete,
-                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
-                      :class => 'btn btn-mini btn-danger' %>
-		</td>
+        
       </tr>
     <% end %>
   </tbody>
 </table>
-<p id="pdf_link"><%= link_to "Download PDF", customer_path(@customer, :format => "pdf") %></p>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_customer_device_path(@customer),
